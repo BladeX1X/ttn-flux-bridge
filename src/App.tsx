@@ -41,7 +41,7 @@ const App: React.FC = () => {
   const [newConn, setNewConn] = useState({ nombre: '', host: 'nam1.cloud.thethings.network', port: 1883, username: '', password: '', topic: 'v3/+/devices/+/up' });
 
   useEffect(() => {
-    // Conexión al Bridge en la Nube (Render)
+    // Conexión a la Nube (Render)
     const socket = new WebSocket('wss://ttn-flux-bridge.onrender.com');
     setWs(socket);
     socket.onopen = () => setIsConnected(true);
